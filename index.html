@@ -41,8 +41,8 @@
               <input
                 id="income-input"
                 type="text"
-                placeholder="Type here"
-                class="input input-bordered w-full max-w-"
+                placeholder="Your Income"
+                class="input input-bordered w-full text-1xl font-semibold"
               />
             </div>
           </div>
@@ -55,10 +55,10 @@
                 >Food:
               </label>
               <input
-                id="income-input"
+                id="food-cost"
                 type="text"
-                placeholder="Type here"
-                class="input input-bordered w-full max-w-"
+                placeholder="Food cost"
+                class="input input-bordered w-full text-1xl font-semibold"
               />
             </div>
             <div class="flex justity-center items-center gap-2 mx-auto w-fit my-4">
@@ -66,10 +66,10 @@
                 >Rent:
               </label>
               <input
-                id="income-input"
+                id="rent-cost"
                 type="text"
-                placeholder="Type here"
-                class="input input-bordered w-full max-w-"
+                placeholder="Rent cost"
+                class="input input-bordered w-full text-1xl font-semibold"
               />
             </div>
             <div class="flex justity-center items-center gap-2 mx-auto w-fit">
@@ -77,43 +77,47 @@
                 >Cloth:
               </label>
               <input
-                id="income-input"
+                id="cloth-cost"
                 type="text"
-                placeholder="Type here"
-                class="input input-bordered w-full max-w-"
+                placeholder="Cloth cost"
+                class="input input-bordered w-full text-1xl font-semibold"
               />
             </div>
           </div>
           <div class="w-[60%] mx-auto flex justify-center">
-            <button class="btn  mt-4 text-2xl font-semibold px-8">Calculate</button>
+            <button id="btn-calculate" class="btn  mt-4 text-2xl font-semibold px-8">Calculate</button>
           </div>
-          <h1 class="text-3xl text-black font-semibold my-3 text-center">
-            Total Expense: 00
+          <h1 class="text-2xl text-black font-semibold my-3 text-center">
+            Total Expense: <span id="total-expense">00</span>
           </h1>
-          <h1 class="text-3xl text-black font-semibold mb-3 text-center">
-            Balance: 00
+          <h1 class="text-2xl text-black font-semibold mb-3 text-center">
+            Balance: <span id="balance">00</span>
           </h1>
           <div class="flex justity-center items-center gap-2 mx-auto w-fit">
             <label for="income-input" class="text-2xl font-semibold"
               >Save:
             </label>
             <input
-              id="income-input"
+              id="saving-input"
               type="text"
-              placeholder="Type here"
-              class="input input-bordered w-full max-w-[150px]"
+              placeholder="Saving %"
+              class="input input-bordered w-full max-w-[150px] text-1xl font-semibold"
             />
             <p class="text-2xl font-semibold px-2">%</p>
-            <button class="btn text-2xl font-semibold">Save</button>
+            <button id="btn-save" class="btn text-2xl font-semibold">Save</button>
           </div>
-          <h1 class="text-3xl text-black font-semibold my-3 text-center">
-            Saving Amount: 00
+          <h1 class="text-2xl text-black font-semibold my-3 text-center">
+            Saving Amount: <span id="saving-amount">00</span>
           </h1>
-          <h1 class="text-3xl text-black font-semibold mb-3 text-center">
-            Remaining Balance: 00
+          <h1 class="text-2xl text-black font-semibold mb-3 text-center">
+            Remaining Balance: <span id="remaining-balance">00</span>
           </h1>
         </div>
       </section>
     </main>
+
+    <!-- JS file -->
+    <script src="js/main.js"></script>
+    <script src="js/utilities.js"></script>
   </body>
 </html>
