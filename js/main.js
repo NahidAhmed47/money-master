@@ -3,12 +3,7 @@ document.getElementById("btn-calculate").addEventListener("click", function () {
   const foodCost = getInputValue("food-cost");
   const rentCost = getInputValue("rent-cost");
   const clothCost = getInputValue("cloth-cost");
-  if (
-    isNaN(getIncome) ||
-    isNaN(foodCost) ||
-    isNaN(rentCost) ||
-    isNaN(clothCost)
-  ) {
+  if ( isNaN(getIncome) || isNaN(foodCost) || isNaN(rentCost) || isNaN(clothCost) || getIncome < 0 || foodCost < 0 || rentCost < 0 || clothCost < 0) {
     alert("Please enter only Number");
     const inputTag = document.getElementsByTagName("input");
     for (const tag of inputTag) {
@@ -33,8 +28,8 @@ document.getElementById("btn-calculate").addEventListener("click", function () {
 document.getElementById("btn-save").addEventListener("click", function () {
   const getIncome = getInputValue("income-input");
   const getSavings = getInputValue("saving-input");
-  if (isNaN(getSavings)) {
-    alert("Enter only number!");
+  if (isNaN(getSavings) || getSavings > 100) {
+    alert("Enter only number and less than 100!");
     document.getElementById("saving-input").value = "";
   } else {
     const savingNumber = getSavings / 100;
